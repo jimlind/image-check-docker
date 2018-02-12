@@ -1,4 +1,4 @@
 #!/bin/sh
 name="image-check-docker-rust"
 
-docker run -t -w /src/exe $name ./run
+docker run -t -v $(pwd)/src:/src -w /src/exe $name ./run
